@@ -1,0 +1,12 @@
+#app {
+    border: 1px solid blue;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.cv-inputs {
+    border: 1px solid green;
+    height: 100%;
+    flex: 1;
+}
