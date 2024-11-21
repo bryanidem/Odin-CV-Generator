@@ -37,6 +37,9 @@
         margin: 10px;
         background-color: #4a4e69;
         color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .input-header {

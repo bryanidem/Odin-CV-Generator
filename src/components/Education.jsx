@@ -3,6 +3,7 @@ import { v4 as uuid } from "uuid";
 import "../styles/Education.css";
 import arrowDown from "../assets/images/arrow_down.svg";
 import arrowUp from "../assets/images/arrow_up.svg";
+import plusIcon from "../assets/images/plus.svg";
 
 const Education = ({
     educationList,
@@ -86,7 +87,8 @@ const Education = ({
                     />
                     <div>
                         <button onClick={handleAddEducation}>
-                            Add Education
+                            <img src={plusIcon} alt="" />
+                            Education
                         </button>
                     </div>
                 </form>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import arrowDown from "../assets/images/arrow_down.svg";
 import arrowUp from "../assets/images/arrow_up.svg";
+import plusIcon from "../assets/images/plus.svg";
 import "../styles/Experience.css";
 
 const Experience = ({
@@ -91,6 +92,13 @@ const Experience = ({
                         value={experienceForm.description}
                         onChange={handleChange}
                     ></textarea>
+
+                    <div>
+                        <button onClick={handleAddExperience}>
+                            <img src={plusIcon} alt="" />
+                            Experience
+                        </button>
+                    </div>
                 </form>
             )}
         </div>

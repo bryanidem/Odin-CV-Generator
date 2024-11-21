@@ -1,6 +1,12 @@
 import "../styles/DisplayCV.css";
 
-const DisplayCV = ({ personalDetails, educationList, educationForm }) => {
+const DisplayCV = ({
+    personalDetails,
+    educationList,
+    educationForm,
+    experienceList,
+    experienceForm,
+}) => {
     return (
         <div className="cv-page">
             <div id="cv-personal">
@@ -38,7 +44,7 @@ const DisplayCV = ({ personalDetails, educationList, educationForm }) => {
                                     <p>{education.location}</p>
                                 </div>
                                 <div>
-                                    <p>{education.school}</p>
+                                    <strong>{education.school}</strong>
                                     <p>{education.degree}</p>
                                 </div>
                             </div>
@@ -54,9 +60,38 @@ const DisplayCV = ({ personalDetails, educationList, educationForm }) => {
                         <p>{educationForm.location}</p>
                     </div>
                     <div>
-                        <p>{educationForm.school}</p>
+                        <strong>{educationForm.school}</strong>
                         <p>{educationForm.degree}</p>
                     </div>
+                </div>
+            </div>
+
+            <div id="cv-experience">
+                <div className="cv-header">
+                    <p>Experience</p>
+                </div>
+                <div>
+                    {experienceList.map((experience) => {
+                        return (
+                            <div
+                                className="experience-item"
+                                key={experience.id}
+                            >
+                                <div>
+                                    <p>
+                                        {experience.startDate} -
+                                        {experience.endDate}
+                                    </p>
+                                    <p>{experience.location}</p>
+                                </div>
+                                <div>
+                                    <strong>experience.company</strong>
+                                    <p>experience.position</p>
+                                    <p>experience.descrition</p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
