@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
+import "../styles/Education.css";
 
 const Education = ({
     educationList,
@@ -27,8 +28,8 @@ const Education = ({
 
     return (
         <div id="education">
-            <h2>Education</h2>
             <form action="">
+                <h2>Education</h2>
                 <label htmlFor="school">School</label>
                 <input
                     type="text"
@@ -58,6 +59,14 @@ const Education = ({
                     type="text"
                     name="endDate"
                     value={educationForm.endDate}
+                    onChange={handleChange}
+                />
+
+                <label htmlFor="location">Location</label>
+                <input
+                    type="text"
+                    name="location"
+                    value={educationForm.location}
                     onChange={handleChange}
                 />
 

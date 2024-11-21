@@ -3,27 +3,36 @@
     src: url("../assets/fonts/Montserrat.ttf");
 }
 #app {
-    border: 1px solid blue;
     display: flex;
     font-family: Montserrat, Courier, monospace;
+    width: 100vw;
 }
 
 .cv-inputs {
-    border: 1px solid green;
+    background-color: #9a8c98;
     min-height: 100%;
     flex: 1;
-    padding: 20px;
+    padding: 10px;
+    color: #22223b;
 
     label {
         font-weight: 500;
-        padding-top: 1rem;
+        padding-top: 0.5rem;
     }
     input {
         border: none;
         border-radius: 5px;
         font-size: 12px;
-        padding: 0.5rem;
+        padding: 0.2rem;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
             rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    button {
+        width: 100px;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px;
     }
 }

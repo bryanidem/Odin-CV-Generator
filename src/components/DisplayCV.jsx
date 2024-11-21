@@ -3,7 +3,7 @@ import "../styles/DisplayCV.css";
 const DisplayCV = ({ personalDetails, educationList, educationForm }) => {
     return (
         <div className="cv-page">
-            <div id="personal">
+            <div id="cv-personal">
                 <h2>{personalDetails.name}</h2>
                 <div className="contact-info">
                     <div className="contact-item">
@@ -22,40 +22,41 @@ const DisplayCV = ({ personalDetails, educationList, educationForm }) => {
             </div>
 
             <div id="cv-education">
-                <h2>Professional Experience</h2>
+                <div className="cv-header">
+                    <p>Education</p>
+                </div>
 
                 <div>
-                    <ul>
-                        {educationList.map((education) => {
-                            return (
-                                <div key={education.id}>
-                                    <div>
-                                        <p>
-                                            {console.log(education.id)}
-                                            {education.startDate} -{" "}
-                                            {education.endDate}
-                                        </p>
-                                        <p>{education.location}</p>
-                                    </div>
-                                    <div>
-                                        <p>{education.school}</p>
-                                        <p>{education.degree}</p>
-                                    </div>
+                    {educationList.map((education) => {
+                        return (
+                            <div key={education.id} className="education-item">
+                                <div>
+                                    <p>
+                                        {education.startDate} -
+                                        {education.endDate}
+                                    </p>
+                                    <p>{education.location}</p>
                                 </div>
-                            );
-                        })}
-                    </ul>
+                                <div>
+                                    <p>{education.school}</p>
+                                    <p>{education.degree}</p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
 
-                <div>
-                    <p>
-                        {educationForm.startDate} - {educationList.endDate}
-                    </p>
-                    <p>{educationForm.location}</p>
-                </div>
-                <div>
-                    <p>{educationForm.school}</p>
-                    <p>{educationForm.degree}</p>
+                <div className="education-item">
+                    <div>
+                        <p>
+                            {educationForm.startDate} - {educationForm.endDate}
+                        </p>
+                        <p>{educationForm.location}</p>
+                    </div>
+                    <div>
+                        <p>{educationForm.school}</p>
+                        <p>{educationForm.degree}</p>
+                    </div>
                 </div>
             </div>
         </div>

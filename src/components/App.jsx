@@ -15,11 +15,11 @@ const App = () => {
     const [educationList, setEducationList] = useState([]);
     const [educationForm, setEducationForm] = useState({
         id: "0",
-        school: "",
-        degree: "",
-        startDate: "",
-        endDate: "",
-        location: "",
+        school: "Dolores Herrera Vda. de Richard",
+        degree: "Elementary School",
+        startDate: "Dec 2002",
+        endDate: "Jan 2008",
+        location: "SLP, México",
     });
 
     return (
