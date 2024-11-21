@@ -53,10 +53,12 @@
     }
 }
 
-#cv-education {
+#cv-education,
+#cv-experience {
     border: 1px solid red;
 
-    .education-item {
+    .education-item,
+    .experience-item {
         display: flex;
         margin: 1rem 2rem;
         gap: 10px;

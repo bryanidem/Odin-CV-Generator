@@ -85,13 +85,26 @@ const DisplayCV = ({
                                     <p>{experience.location}</p>
                                 </div>
                                 <div>
-                                    <strong>experience.company</strong>
-                                    <p>experience.position</p>
-                                    <p>experience.descrition</p>
+                                    <strong>{experience.company}</strong>
+                                    <p>{experience.position}</p>
+                                    <p>{experience.descrition}</p>
                                 </div>
                             </div>
                         );
                     })}
+                </div>
+                <div className="experience-item">
+                    <div>
+                        <p>
+                            {experienceForm.startDate} -{experienceForm.endDate}
+                        </p>
+                        <p>{experienceForm.location}</p>
+                    </div>
+                    <div>
+                        <strong>{experienceForm.company}</strong>
+                        <p>{experienceForm.position}</p>
+                        <p>{experienceForm.descrition}</p>
+                    </div>
                 </div>
             </div>
         </div>

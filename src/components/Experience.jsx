@@ -3,6 +3,7 @@ import arrowDown from "../assets/images/arrow_down.svg";
 import arrowUp from "../assets/images/arrow_up.svg";
 import plusIcon from "../assets/images/plus.svg";
 import "../styles/Experience.css";
+import { v4 as uuid } from "uuid";
 
 const Experience = ({
     experienceList,
@@ -25,6 +26,7 @@ const Experience = ({
         e.preventDefault();
         setExperienceList([...experienceList, experienceForm]);
         setExperienceForm({
+            id: uuid(),
             company: "",
             position: "",
             startDate: "",

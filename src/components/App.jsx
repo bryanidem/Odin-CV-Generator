@@ -4,6 +4,7 @@ import Education from "./Education";
 import DisplayCV from "./DisplayCV";
 import Experience from "./Experience";
 import "../styles/App.css";
+import { v4 as uuid } from "uuid";
 
 const App = () => {
     const [personalDetails, setPersonalDetails] = useState({
@@ -15,7 +16,7 @@ const App = () => {
 
     const [educationList, setEducationList] = useState([]);
     const [educationForm, setEducationForm] = useState({
-        id: "0",
+        id: uuid(),
         school: "Dolores Herrera Vda. de Richard",
         degree: "Elementary School",
         startDate: "Dec 2002",
@@ -25,6 +26,7 @@ const App = () => {
 
     const [experienceList, setExperienceList] = useState([]);
     const [experienceForm, setExperienceForm] = useState({
+        id: uuid(),
         company: "Testing Company",
         position: "Trainee",
         startDate: "Dec 2020",
@@ -33,6 +35,9 @@ const App = () => {
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sunt reiciendis deserunt quas nemo aut pariatur error, repellendus sit quod optio similique. Nisi blanditiis, molestiae rerum sed laborum nam! Nobis?",
     });
+
+    const [isEducationVisible, setIsEducationVisible] = useState(false);
+    const [isExperienceVisible, setIsExperienceVisible] = useState(false);
 
     return (
         <div id="app">
