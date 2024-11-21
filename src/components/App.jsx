@@ -6,10 +6,10 @@ import "../styles/App.css";
 
 const App = () => {
     const [personalDetails, setPersonalDetails] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        location: "",
+        name: "Bryan Medina",
+        email: "bryan.medina.per@gmail.com",
+        phone: "1231231231",
+        location: "Rioverde, SLP, México",
     });
 
     const [educationList, setEducationList] = useState([]);

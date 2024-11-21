@@ -1,3 +1,5 @@
+import "../styles/PersonalDetails.css";
+
 const PersonalDetails = ({ personalDetails, setPersonalDetails }) => {
     const handleChange = (e) => {
         const { name, value } = e.target;

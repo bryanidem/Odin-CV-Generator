@@ -3,13 +3,21 @@ import "../styles/DisplayCV.css";
 const DisplayCV = ({ personalDetails, educationList, educationForm }) => {
     return (
         <div className="cv-page">
-            <h2>CV</h2>
             <div id="personal">
-                <p>{personalDetails.name}</p>
-                <div>
-                    <p>{personalDetails.email}</p>
-                    <p>{personalDetails.phone}</p>
-                    <p>{personalDetails.location}</p>
+                <h2>{personalDetails.name}</h2>
+                <div className="contact-info">
+                    <div className="contact-item">
+                        <img src="src/assets/images/mail.svg" alt="" />
+                        <p>{personalDetails.email}</p>
+                    </div>
+                    <div className="contact-item">
+                        <img src="src/assets/images/phone.svg" alt="" />
+                        <p>{personalDetails.phone}</p>
+                    </div>
+                    <div className="contact-item">
+                        <img src="src/assets/images/location.svg" alt="" />
+                        <p>{personalDetails.location}</p>
+                    </div>
                 </div>
             </div>
 
