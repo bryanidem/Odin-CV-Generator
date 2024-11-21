@@ -1,16 +1,15 @@
 import { useState } from "react";
-import { v4 as uuid } from "uuid";
-import "../styles/Education.css";
 import arrowDown from "../assets/images/arrow_down.svg";
 import arrowUp from "../assets/images/arrow_up.svg";
+import "../styles/Experience.css";
 
-const Education = ({
-    educationList,
-    setEducationList,
-    educationForm,
-    setEducationForm,
+const Experience = ({
+    experienceList,
+    setExperienceList,
+    experienceForm,
+    setExperienceForm,
 }) => {
-    const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
@@ -18,26 +17,26 @@ const Education = ({
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setEducationForm({ ...educationForm, [name]: value });
+        setExperienceForm({ ...experienceForm, [name]: value });
     };
 
-    const handleAddEducation = (e) => {
+    const handleAddExperience = (e) => {
         e.preventDefault();
-        setEducationList([...educationList, { ...educationForm, id: uuid() }]);
-        console.log(educationList);
-        setEducationForm({
-            school: "",
-            degree: "",
+        setExperienceList([...experienceList, experienceForm]);
+        setExperienceForm({
+            company: "",
+            position: "",
             startDate: "",
             endDate: "",
             location: "",
+            description: "",
         });
     };
 
     return (
-        <div id="education">
+        <div id="experience">
             <div className="input-header">
-                <h2>Education</h2>
+                <h2>Experience</h2>
                 <button onClick={toggleVisibility}>
                     <img src={isVisible ? arrowUp : arrowDown} alt="" />
                 </button>
@@ -45,19 +44,19 @@ const Education = ({
 
             {isVisible && (
                 <form action="">
-                    <label htmlFor="school">School</label>
+                    <label htmlFor="company">Company Name</label>
                     <input
                         type="text"
-                        name="school"
-                        value={educationForm.school}
+                        name="company"
+                        value={experienceForm.company}
                         onChange={handleChange}
                     />
 
-                    <label htmlFor="degree">Degree</label>
+                    <label htmlFor="position">Position Title</label>
                     <input
                         type="text"
-                        name="degree"
-                        value={educationForm.degree}
+                        name="position"
+                        value={experienceForm.position}
                         onChange={handleChange}
                     />
 
@@ -65,7 +64,7 @@ const Education = ({
                     <input
                         type="text"
                         name="startDate"
-                        value={educationForm.startDate}
+                        value={experienceForm.startDate}
                         onChange={handleChange}
                     />
 
@@ -73,7 +72,7 @@ const Education = ({
                     <input
                         type="text"
                         name="endDate"
-                        value={educationForm.endDate}
+                        value={experienceForm.endDate}
                         onChange={handleChange}
                     />
 
@@ -81,18 +80,21 @@ const Education = ({
                     <input
                         type="text"
                         name="location"
-                        value={educationForm.location}
+                        value={experienceForm.location}
                         onChange={handleChange}
                     />
-                    <div>
-                        <button onClick={handleAddEducation}>
-                            Add Education
-                        </button>
-                    </div>
+
+                    <label htmlFor="description">Description</label>
+                    <textarea
+                        name="description"
+                        id="description"
+                        value={experienceForm.description}
+                        onChange={handleChange}
+                    ></textarea>
                 </form>
             )}
         </div>
     );
 };
 
-export default Education;
+export default Experience;

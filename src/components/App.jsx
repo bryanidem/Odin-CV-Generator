@@ -2,6 +2,7 @@ import { useState } from "react";
 import PersonalDetails from "./PersonalDetails";
 import Education from "./Education";
 import DisplayCV from "./DisplayCV";
+import Experience from "./Experience";
 import "../styles/App.css";
 
 const App = () => {
@@ -22,6 +23,17 @@ const App = () => {
         location: "SLP, México",
     });
 
+    const [experienceList, setExperienceList] = useState([]);
+    const [experienceForm, setExperienceForm] = useState({
+        company: "Testing Company",
+        position: "Trainee",
+        startDate: "Dec 2020",
+        endDate: "Oct 2023",
+        location: "SLP, México",
+        description:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sunt reiciendis deserunt quas nemo aut pariatur error, repellendus sit quod optio similique. Nisi blanditiis, molestiae rerum sed laborum nam! Nobis?",
+    });
+
     return (
         <div id="app">
             <div className="cv-inputs">
@@ -35,12 +47,21 @@ const App = () => {
                     educationForm={educationForm}
                     setEducationForm={setEducationForm}
                 />
+
+                <Experience
+                    experienceList={experienceList}
+                    setExperienceList={setExperienceList}
+                    experienceForm={experienceForm}
+                    setExperienceForm={setExperienceForm}
+                />
             </div>
             <div className="cv-display">
                 <DisplayCV
                     personalDetails={personalDetails}
                     educationList={educationList}
                     educationForm={educationForm}
+                    experienceList={experienceList}
+                    experienceForm={experienceForm}
                 />
             </div>
         </div>

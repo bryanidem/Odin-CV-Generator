@@ -1,11 +1,11 @@
-#education {
+#experience {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
     margin: 10px 0;
     padding: 10px;
     background-color: #a3a6b9;
 }
-#education > form {
+#experience > form {
     display: flex;
     flex-direction: column;
     padding: 20px;

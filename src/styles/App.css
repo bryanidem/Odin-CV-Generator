@@ -14,6 +14,7 @@
     flex: 1;
     padding: 10px;
     color: #22223b;
+    background-color: #4a4e69;
 
     label {
         font-weight: 500;
@@ -34,5 +35,18 @@
         padding: 5px;
         border-radius: 5px;
         margin: 10px;
+        background-color: #4a4e69;
+        color: white;
+    }
+
+    .input-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    textarea {
+        border: none;
+        border-radius: 5px;
     }
 }
