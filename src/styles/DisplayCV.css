@@ -4,15 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 5%;
 }
 .cv-page {
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
-    /* width: 100%;
-    height: 100%; */
     width: 800px;
     height: 1000px;
 
@@ -64,14 +61,10 @@
         justify-content: flex-start;
         align-items: flex-start;
         div:nth-child(1) {
-            /* flex: 1; */
             min-width: 200px;
             text-align: justify;
         }
         div {
-            /* display: flex;
-            flex-direction: column; */
-
             p {
                 margin: 0;
             }

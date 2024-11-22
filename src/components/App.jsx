@@ -36,9 +36,6 @@ const App = () => {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit sunt reiciendis deserunt quas nemo aut pariatur error, repellendus sit quod optio similique. Nisi blanditiis, molestiae rerum sed laborum nam! Nobis?",
     });
 
-    const [isEducationVisible, setIsEducationVisible] = useState(false);
-    const [isExperienceVisible, setIsExperienceVisible] = useState(false);
-
     return (
         <div id="app">
             <div className="cv-inputs">
