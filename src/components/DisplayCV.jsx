@@ -87,7 +87,7 @@ const DisplayCV = ({
                                 <div>
                                     <strong>{experience.company}</strong>
                                     <p>{experience.position}</p>
-                                    <p>{experience.descrition}</p>
+                                    <p>{experience.description}</p>
                                 </div>
                             </div>
                         );
@@ -103,7 +103,7 @@ const DisplayCV = ({
                     <div>
                         <strong>{experienceForm.company}</strong>
                         <p>{experienceForm.position}</p>
-                        <p>{experienceForm.descrition}</p>
+                        <p>{experienceForm.description}</p>
                     </div>
                 </div>
             </div>
